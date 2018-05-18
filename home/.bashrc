@@ -5,6 +5,15 @@ case "$-" in
     *)  return;;
 esac
 
+#Load aliases file
+if [ -e ${HOME}/.bash/aliases.sh ]; then
+    source ${HOME}/.bash/aliases.sh
+fi
+
+#Load exports file
+if [ -e ${HOME}/.bash/exports.sh ]; then
+    source ${HOME}/.bash/exports.sh
+fi
 
 #Load functions file
 if [ -e ${HOME}/.bash/functions.sh ]; then
